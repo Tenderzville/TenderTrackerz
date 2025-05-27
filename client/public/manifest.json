@@ -1,0 +1,119 @@
+{
+  "name": "TenderAlert Pro - Kenya's Premier Tender Notification Platform",
+  "short_name": "TenderAlert",
+  "description": "Never miss a tender opportunity again. Get AI-powered insights, form winning consortiums, and access professional services to boost your success rate.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1E40AF",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "finance"],
+  "lang": "en",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTIiIGZpbGw9IiMxRTQwQUYiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMiIgeT0iMTIiPgo8cGF0aCBkPSJNNiAzSDEyTDE4IDZWMjFBMyAzIDAgMCAxIDE1IDI0SDZBMyAzIDAgMCAxIDMgMjFWNkEzIDMgMCAwIDEgNiAzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "48x48",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMTgiIGZpbGw9IiMxRTQwQUYiLz4KPHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxOCIgeT0iMTgiPgo8cGF0aCBkPSJNNiAzSDEyTDE4IDZWMjFBMyAzIDAgMCAxIDE1IDI0SDZBMyAzIDAgMCAxIDMgMjFWNkEzIDMgMCAwIDEgNiAzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMjQiIGZpbGw9IiMxRTQwQUYiLz4KPHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIyNCIgeT0iMjQiPgo8cGF0aCBkPSJNNiAzSDEyTDE4IDZWMjFBMyAzIDAgMCAxIDE1IDI0SDZBMyAzIDAgMCAxIDMgMjFWNkEzIDMgMCAwIDEgNiAzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCIgdmlld0JveD0iMCAwIDE0NCAxNDQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNDQiIGhlaWdodD0iMTQ0IiByeD0iMzYiIGZpbGw9IiMxRTQwQUYiLz4KPHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIzNiIgeT0iMzYiPgo8cGF0aCBkPSJNNiAzSDEyTDE4IDZWMjFBMyAzIDAgMCAxIDE1IDI0SDZBMyAzIDAgMCAxIDMgMjFWNkEzIDMgMCAwIDEgNiAzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iNDgiIGZpbGw9IiMxRTQwQUYiLz4KPHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSI0OCIgeT0iNDgiPgo8cGF0aCBkPSJNNiAzSDEyTDE4IDZWMjFBMyAzIDAgMCAxIDE1IDI0SDZBMyAzIDAgMCAxIDMgMjFWNkEzIDMgMCAwIDEgNiAzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTI4IiBmaWxsPSIjMUU0MEFGIi8+Cjxzdmcgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMjgiIHk9IjEyOCI+CjxwYXRoIGQ9Ik02IDNIMTJMMTggNlYyMUEzIDMgMCAwIDEgMTUgMjRINkEzIDMgMCAwIDEgMyAyMVY2QTMgMyAwIDAgMSA2IDNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+Cg==",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjU2OCIgdmlld0JveD0iMCAwIDMyMCA1NjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iNTY4IiBmaWxsPSIjRjVGN0ZBIi8+CjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjI4OCIgaGVpZ2h0PSI1MzYiIHJ4PSIxNiIgZmlsbD0id2hpdGUiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIzMiIgeT0iMzIiPgo8cGF0aCBkPSJNNiAzSDEyTDE4IDZWMjFBMyAzIDAgMCAxIDE1IDI0SDZBMyAzIDAgMCAxIDMgMjFWNkEzIDMgMCAwIDEgNiAzWiIgZmlsbD0iIzFFNDBBRiIvPgo8L3N2Zz4KPHRleHQgeD0iNjQiIHk9IjQ4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMUYyOTM3Ij5UZW5kZXJBbGVydCBQcm88L3RleHQ+Cjx0ZXh0IHg9IjMyIiB5PSI5NiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNjM3Mzg0Ij5EYXNoYm9hcmQ8L3RleHQ+CjxyZWN0IHg9IjMyIiB5PSIxMTIiIHdpZHRoPSIyNTYiIGhlaWdodD0iODAiIHJ4PSI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjMyIiB5PSIyMDgiIHdpZHRoPSIyNTYiIGhlaWdodD0iODAiIHJ4PSI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjMyIiB5PSIzMDQiIHdpZHRoPSIyNTYiIGhlaWdodD0iODAiIHJ4PSI4IiBmaWxsPSIjRjNGNEY2Ii8+Cjwvc3ZnPgo=",
+      "sizes": "320x568",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Mobile dashboard view"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMjgwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iODAwIiBmaWxsPSIjRjVGN0ZBIi8+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyNTYiIGhlaWdodD0iODAwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIyNTYiIHk9IjAiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjgwMCIgZmlsbD0iI0Y5RkFGQiIvPgo8c3ZnIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjMyIiB5PSIzMiI+CjxwYXRoIGQ9Ik02IDNIMTJMMTggNlYyMUEzIDMgMCAwIDEgMTUgMjRINkEzIDMgMCAwIDEgMyAyMVY2QTMgMyAwIDAgMSA2IDNaIiBmaWxsPSIjMUU0MEFGIi8+Cjwvc3ZnPgo8dGV4dCB4PSI2NCIgeT0iNDgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxRjI5MzciPlRlbmRlckFsZXJ0IFBybzwvdGV4dD4KPHRleHQgeD0iMjg4IiB5PSI2NCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFGMjkzNyI+V2VsY29tZSBiYWNrITwvdGV4dD4KPHJlY3QgeD0iMjg4IiB5PSIxMjgiIHdpZHRoPSI5NjAiIGhlaWdodD0iMTIwIiByeD0iOCIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMjg4IiB5PSIyNjQiIHdpZHRoPSI5NjAiIGhlaWdodD0iMTIwIiByeD0iOCIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMjg4IiB5PSI0MDAiIHdpZHRoPSI5NjAiIGhlaWdodD0iMTIwIiByeD0iOCIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==",
+      "sizes": "1280x800",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Desktop dashboard view"
+    }
+  ],
+  "features": [
+    "Cross Platform",
+    "fast",
+    "installable",
+    "reliable"
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Tenders",
+      "short_name": "Browse",
+      "description": "Search and filter available tenders",
+      "url": "/browse",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYgM0gxMkwxOCA2VjIxQTMgMyAwIDAgMSAxNSAyNEg2QTMgMyAwIDAgMSAzIDIxVjZBMyAzIDAgMCAxIDYgM1oiIGZpbGw9IiMxRTQwQUYiLz4KPC9zdmc+Cg==",
+          "sizes": "24x24",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Saved Tenders",
+      "short_name": "Saved",
+      "description": "View your saved tender opportunities",
+      "url": "/saved",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDIxLjM1TDEwLjU1IDIwLjAzQzUuNSAxNS4zNiAyIDEyLjI3IDIgOC41QzIgNS40MSA0LjQyIDMgNy41IDNDOSA0LjA5IDEwLjU5IDQgMTIgNEMxMy40MSA0IDE1IDMuMDkgMTYuNSAzQzE5LjU4IDMgMjIgNS40MSAyMiA4LjVDMjIgMTIuMjcgMTguNSAxNS4zNiAxMy40NSAyMC4wM0wxMiAyMS4zNVoiIGZpbGw9IiNEQzI2MjYiLz4KPC9zdmc+Cg==",
+          "sizes": "24x24",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "AI Analysis",
+      "short_name": "AI",
+      "description": "AI-powered tender insights and recommendations",
+      "url": "/ai-analysis",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxLjUgOS41QzIxLjUgMTIuNTQgMTkuNDcgMTUuMTUgMTYuNzQgMTYuMDhDMTYuOTEgMTUuNTcgMTcgMTUuMDMgMTcgMTQuNUMxNyAxMC45MSAxNC4wOSA4IDEwLjUgOEM5Ljk3IDggOS40MyA4LjA5IDguOTIgOC4yNkM5Ljg1IDUuNTMgMTIuNDYgMy41IDE1LjUgMy41QzE5LjA5IDMuNSAyMiA2LjQxIDIyIDEwQzIyIDEwLjE3IDIxLjk5IDEwLjMzIDIxLjk3IDEwLjVDMjEuODMgMTAuMTcgMjEuNjcgOS44NCAyMS41IDkuNVoiIGZpbGw9IiM4QjVDRjYiLz4KPC9zdmc+Cg==",
+          "sizes": "24x24",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
