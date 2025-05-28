@@ -2,6 +2,8 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth, isAuthenticated } from "./replitAuth";
+import { createPaypalOrder, capturePaypalOrder, loadPaypalDefault } from "./paypal";
+import { tenderScraper } from "./tenderScraper";
 import { z } from "zod";
 import { insertTenderSchema, insertSavedTenderSchema, insertConsortiumSchema, insertConsortiumMemberSchema, insertServiceProviderSchema, insertAiAnalysisSchema } from "@shared/schema";
 
@@ -18,6 +20,79 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error fetching user:", error);
       res.status(500).json({ message: "Failed to fetch user" });
+    }
+  });
+
+  // PayPal payment routes
+  app.get("/paypal/setup", async (req, res) => {
+    await loadPaypalDefault(req, res);
+  });
+
+  app.post("/paypal/order", async (req, res) => {
+    await createPaypalOrder(req, res);
+  });
+
+  app.post("/paypal/order/:orderID/capture", async (req, res) => {
+    await capturePaypalOrder(req, res);
+  });
+
+  // Social media and loyalty points routes
+  app.post("/api/social/follow-twitter", isAuthenticated, async (req, res) => {
+    try {
+      const userId = req.user.claims.sub;
+      const user = await storage.markTwitterFollowed(userId);
+      res.json({ 
+        success: true, 
+        message: "Twitter follow confirmed! You earned 50 loyalty points.",
+        points: user.loyaltyPoints,
+        twitterUrl: "https://x.com/Supply_ChainKe"
+      });
+    } catch (error) {
+      console.error("Error marking Twitter follow:", error);
+      res.status(500).json({ message: "Failed to process Twitter follow" });
+    }
+  });
+
+  app.post("/api/referral/use", isAuthenticated, async (req, res) => {
+    try {
+      const { referralCode } = req.body;
+      const userId = req.user.claims.sub;
+      
+      const referrer = await storage.getUserByReferralCode(referralCode);
+      if (!referrer) {
+        return res.status(404).json({ message: "Invalid referral code" });
+      }
+      
+      await storage.addLoyaltyPoints(referrer.id, 100);
+      await storage.addLoyaltyPoints(userId, 50);
+      
+      res.json({ 
+        success: true, 
+        message: "Referral applied! You both earned bonus points." 
+      });
+    } catch (error) {
+      console.error("Error processing referral:", error);
+      res.status(500).json({ message: "Failed to process referral" });
+    }
+  });
+
+  app.get("/api/user/loyalty", isAuthenticated, async (req, res) => {
+    try {
+      const userId = req.user.claims.sub;
+      const user = await storage.getUser(userId);
+      
+      const discount = Math.floor((user?.loyaltyPoints || 0) / 100) * 5;
+      
+      res.json({
+        loyaltyPoints: user?.loyaltyPoints || 0,
+        discountPercentage: Math.min(discount, 50),
+        referralCode: user?.referralCode,
+        isEarlyUser: user?.isEarlyUser,
+        subscriptionType: user?.subscriptionType
+      });
+    } catch (error) {
+      console.error("Error fetching loyalty info:", error);
+      res.status(500).json({ message: "Failed to fetch loyalty info" });
     }
   });
 
@@ -421,6 +496,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ message: "Failed to seed data" });
     }
   });
+
+  // Start tender scraping on server startup
+  console.log('Starting tender scraping service...');
+  tenderScraper.startPeriodicScraping();
 
   const httpServer = createServer(app);
   return httpServer;
