@@ -43,6 +43,11 @@ export const users = pgTable("users", {
   subscriptionEndDate: timestamp("subscription_end_date"),
   isEarlyUser: boolean("is_early_user").default(false), // First 100 users
   paypalSubscriptionId: varchar("paypal_subscription_id"),
+  loyaltyPoints: integer("loyalty_points").default(0),
+  referralCode: varchar("referral_code").unique(),
+  referredBy: varchar("referred_by"),
+  twitterFollowed: boolean("twitter_followed").default(false),
+  totalReferrals: integer("total_referrals").default(0),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });

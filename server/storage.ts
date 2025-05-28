@@ -32,6 +32,11 @@ export interface IStorage {
   // User operations (mandatory for Replit Auth)
   getUser(id: string): Promise<User | undefined>;
   upsertUser(user: UpsertUser): Promise<User>;
+  updateUserSubscription(id: string, subscriptionData: Partial<User>): Promise<User>;
+  getUserByReferralCode(code: string): Promise<User | undefined>;
+  addLoyaltyPoints(userId: string, points: number): Promise<User>;
+  markTwitterFollowed(userId: string): Promise<User>;
+  getTenderByReference(referenceNumber: string): Promise<Tender | undefined>;
   
   // Tender operations
   getTenders(filters?: { category?: string; location?: string; search?: string }): Promise<Tender[]>;
@@ -74,6 +79,17 @@ export class DatabaseStorage implements IStorage {
   }
 
   async upsertUser(userData: UpsertUser): Promise<User> {
+    // Generate referral code if not provided
+    if (!userData.referralCode) {
+      userData.referralCode = `REF${userData.id?.slice(-6).toUpperCase() || Math.random().toString(36).substr(2, 6).toUpperCase()}`;
+    }
+
+    // Check if this is one of the first 100 users for early user benefits
+    const userCount = await db.$count(users);
+    if (userCount < 100) {
+      userData.isEarlyUser = true;
+    }
+
     const [user] = await db
       .insert(users)
       .values(userData)
@@ -86,6 +102,59 @@ export class DatabaseStorage implements IStorage {
       })
       .returning();
     return user;
+  }
+
+  async updateUserSubscription(id: string, subscriptionData: Partial<User>): Promise<User> {
+    const [user] = await db
+      .update(users)
+      .set({
+        ...subscriptionData,
+        updatedAt: new Date(),
+      })
+      .where(eq(users.id, id))
+      .returning();
+    return user;
+  }
+
+  async getUserByReferralCode(code: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.referralCode, code));
+    return user;
+  }
+
+  async addLoyaltyPoints(userId: string, points: number): Promise<User> {
+    const currentUser = await this.getUser(userId);
+    const newPoints = (currentUser?.loyaltyPoints || 0) + points;
+    
+    const [user] = await db
+      .update(users)
+      .set({
+        loyaltyPoints: newPoints,
+        updatedAt: new Date(),
+      })
+      .where(eq(users.id, userId))
+      .returning();
+    return user;
+  }
+
+  async markTwitterFollowed(userId: string): Promise<User> {
+    const currentUser = await this.getUser(userId);
+    const newPoints = (currentUser?.loyaltyPoints || 0) + 50; // 50 points for following Twitter
+    
+    const [user] = await db
+      .update(users)
+      .set({
+        twitterFollowed: true,
+        loyaltyPoints: newPoints,
+        updatedAt: new Date(),
+      })
+      .where(eq(users.id, userId))
+      .returning();
+    return user;
+  }
+
+  async getTenderByReference(referenceNumber: string): Promise<Tender | undefined> {
+    const [tender] = await db.select().from(tenders).where(eq(tenders.tenderNumber, referenceNumber));
+    return tender;
   }
 
   // Tender operations
