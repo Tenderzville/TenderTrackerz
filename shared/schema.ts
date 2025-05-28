@@ -37,6 +37,12 @@ export const users = pgTable("users", {
   phoneNumber: varchar("phone_number"),
   location: varchar("location"),
   businessType: varchar("business_type"),
+  subscriptionType: varchar("subscription_type").default("free"), // 'free', 'pro'
+  subscriptionStatus: varchar("subscription_status").default("active"), // 'active', 'cancelled', 'expired'
+  subscriptionStartDate: timestamp("subscription_start_date"),
+  subscriptionEndDate: timestamp("subscription_end_date"),
+  isEarlyUser: boolean("is_early_user").default(false), // First 100 users
+  paypalSubscriptionId: varchar("paypal_subscription_id"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });

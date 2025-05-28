@@ -312,7 +312,10 @@ export default function Landing() {
                   </div>
                   <Badge className="bg-primary text-white">Most Popular</Badge>
                 </div>
-                <div className="text-3xl font-bold">KSh 2,500<span className="text-lg font-normal">/month</span></div>
+                <div className="text-3xl font-bold">KSh 500<span className="text-lg font-normal">/month</span></div>
+                <div className="text-sm text-green-600 dark:text-green-400 font-medium mt-1">
+                  First 100 users get Year 1 FREE!
+                </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-left">
@@ -327,6 +330,14 @@ export default function Landing() {
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
                     Consortium features
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
+                    Social media integration
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
+                    Service provider marketplace
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
